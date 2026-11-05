@@ -80,7 +80,7 @@ Run commands from the project root directory.
 ### 1. Initialize the database
 
 ``` bash
-python payroll.py init
+python3 payroll.py init
 ```
 
 Creates the SQLite database and required tables.
@@ -88,7 +88,7 @@ Creates the SQLite database and required tables.
 ### 2. Load input data
 
 ``` bash
-python payroll.py load
+python3 payroll.py load
 ```
 
 Loads employee master records and regular clock events from the CSV
@@ -98,7 +98,7 @@ records.
 ### 3. Review October attendance
 
 ``` bash
-python payroll.py attendance 2026-10
+python3 payroll.py attendance 2026-10
 ```
 
 Displays the attendance summary for October 2026.
@@ -106,7 +106,7 @@ Displays the attendance summary for October 2026.
 ### 4. Calculate October payroll
 
 ``` bash
-python payroll.py run 2026-10
+python3 payroll.py run 2026-10
 ```
 
 Calculates and saves October payroll for the employees, then displays
@@ -115,20 +115,20 @@ the payslips.
 ### 5. Generate an individual payslip
 
 ``` bash
-python payroll.py payslip E01 2026-10
+python3 payroll.py payslip E01 2026-10
 ```
 
 Replace `E01` with another employee ID to display a different employee's
 payslip. Use `ALL` to display all available payslips:
 
 ``` bash
-python payroll.py payslip ALL 2026-10
+python3 payroll.py payslip ALL 2026-10
 ```
 
 ### 6. Lock October payroll
 
 ``` bash
-python payroll.py lock 2026-10
+python3 payroll.py lock 2026-10
 ```
 
 Locks the finalized October payroll period. A locked period cannot be
@@ -137,7 +137,7 @@ recalculated.
 ### 7. Import late-arriving events and calculate arrears
 
 ``` bash
-python payroll.py late data/late_events.csv
+python3 payroll.py late data/late_events.csv
 ```
 
 Imports late events after October has been locked. The system calculates
@@ -147,7 +147,7 @@ adjustment to November 2026. It does not overwrite the October payslips.
 ### 8. View November payslips
 
 ``` bash
-python payroll.py payslip ALL 2026-11
+python3 payroll.py payslip ALL 2026-11
 ```
 
 Displays November payslips for employees with arrears adjustments. If
@@ -159,7 +159,7 @@ its existing net pay.
 The following are the successful outputs of the requested CLI command:
 
 ``` bash
-python payroll.py payslip <employee_id> 2026-10
+python3 payroll.py payslip <employee_id> 2026-10
 ```
 
 ### E01 --- Ravi Kumar
